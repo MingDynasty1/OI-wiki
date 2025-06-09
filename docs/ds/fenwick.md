@@ -159,7 +159,7 @@ $c$ 数组就是用来储存原始数组 $a$ 某段区间的和的，也就是�
 
 我们可以写出查询 $a[1 \ldots x]$ 的过程：
 
--   从 $c[x]$ 开始往前跳，有 $c[x]$ 管辖 $a[x-\operatorname{lowbit}(x)+1 \ldots x]$；
+-   从 $c[x]$ 开始往前跳，有 $c[x]$ 管辖 $a[x-\operatorname{lowbit}(x)+1 \ldots x]$； 
 -   令 $x \gets x - \operatorname{lowbit}(x)$，如果 $x = 0$ 说明已经跳到尽头了，终止循环；否则回到第一步。
 -   将跳到的 $c$ 合并。
 
